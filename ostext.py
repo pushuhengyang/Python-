@@ -1,17 +1,29 @@
 # os 模块
 
+from __future__ import division
+
 import os,sys,stat
 
 
-filepath = '/Users/pro/Desktop/fool.txt'
-
-os.access(filepath,os.F_OK)
-os.access(filepath,os.W_OK)
-os.access(filepath,os.R_OK)
-os.access(filepath,os.X_OK)
+filepath = '/Users/pro/Desktop/程序'
 
 
-print(os.getcwd())
+files_dict = dict()
+def getFileSize(file):
+    if os.path.exists(file):
+        size = os.path.getsize(file)
+        files_dict[file] = size
+
+getFileSize(filepath)
+print(files_dict)
+
+# os.access(filepath,os.F_OK)
+# os.access(filepath,os.W_OK)
+# os.access(filepath,os.R_OK)
+# os.access(filepath,os.X_OK)
+#
+#
+# print(os.getcwd())
 # 修改路径
 # os.chdir('/Users/pro/Desktop')
 
@@ -42,11 +54,29 @@ print(os.getcwd())
 # 关闭文件描述
 # os.close(f)
 
-while True:
-    try:
-        x = int(input('输入一个整数'))
-        break
-    except ValueError:
-        print('傻子  这不是整数')
+# while True:
+#     try:
+#         x = int(input('输入一个整数'))
+#         break
+#     except ValueError:
+#         print('傻子  这不是整数')
 
 # raise  这个就是抛出异常的类
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
